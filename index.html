@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Layout with Search and Telegram</title>
+    <title>Download Links with Timer</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -62,6 +62,13 @@
         }
     </style>
     <script>
+        function startTimer(link) {
+            alert("Please wait 20 seconds...");
+            setTimeout(function() {
+                window.location.href = link;
+            }, 20000);
+        }
+
         function searchMovies() {
             let input = document.getElementById('search').value.toLowerCase();
             let movies = document.getElementsByClassName('movie');
@@ -83,73 +90,87 @@
             <a href="https://t.me/yourchannel"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"></a>
         </div>
     </div>
-    
-     <div class="content">
-        <div class="movie">
-            <h2>Movie Title 6 </h2>
-            <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
-            <div class="download-links">
-                <a href="#"> 480p</a>
-                <a href="#"> 720p</a>
-                <a href="#"> 1080p</a>
-            </div>
-        </div>
-         
-     <div class="content">
+
+    <div class="content">
         <div class="movie">
             <h2>Movie Title 1</h2>
             <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
             <div class="download-links">
-                <a href="#"> 480p</a>
-                <a href="#"> 720p</a>
-                <a href="#"> 1080p</a>
+                <a href="#" onclick="startTimer('https://example.com/480p')">Download 480p</a>
+                <a href="#" onclick="startTimer('https://example.com/720p')">Download 720p</a>
+                <a href="#" onclick="startTimer('https://example.com/1080p')">Download 1080p</a>
             </div>
         </div>
 
-     <div class="content">
         <div class="movie">
-            <h2>Movie Title 2 </h2>
+            <h2>Movie Title 2</h2>
             <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
             <div class="download-links">
-                <a href="#"> 480p</a>
-                <a href="#"> 720p</a>
-                <a href="#"> 1080p</a>
+                <a href="#" onclick="startTimer('https://example.com/480p')">Download 480p</a>
+                <a href="#" onclick="startTimer('https://example.com/720p')">Download 720p</a>
+                <a href="#" onclick="startTimer('https://example.com/1080p')">Download 1080p</a>
             </div>
-        </div> 
+        </div>
 
-     <div class="content">
         <div class="movie">
             <h2>Movie Title 3</h2>
             <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
             <div class="download-links">
-                <a href="#"> 480p</a>
-                <a href="#"> 720p</a>
-                <a href="#"> 1080p</a>
+                <a href="#" onclick="startTimer('https://example.com/480p')">Download 480p</a>
+                <a href="#" onclick="startTimer('https://example.com/720p')">Download 720p</a>
+                <a href="#" onclick="startTimer('https://example.com/1080p')">Download 1080p</a>
             </div>
         </div>
 
-     <div class="content">
         <div class="movie">
-            <h2>Movie Title 4 </h2>
+            <h2>Movie Title 4</h2>
             <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
             <div class="download-links">
-                <a href="#"> 480p</a>
-                <a href="#"> 720p</a>
-                <a href="#"> 1080p</a>
+                <a href="#" onclick="startTimer('https://example.com/480p')">Download 480p</a>
+                <a href="#" onclick="startTimer('https://example.com/720p')">Download 720p</a>
+                <a href="#" onclick="startTimer('https://example.com/1080p')">Download 1080p</a>
             </div>
         </div>
 
-     <div class="content">
         <div class="movie">
             <h2>Movie Title 5</h2>
             <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
             <div class="download-links">
-                <a href="#"> 480p</a>
-                <a href="#"> 720p</a>
-                <a href="#"> 1080p</a>
+                <a href="#" onclick="startTimer('https://example.com/480p')">Download 480p</a>
+                <a href="#" onclick="startTimer('https://example.com/720p')">Download 720p</a>
+                <a href="#" onclick="startTimer('https://example.com/1080p')">Download 1080p</a>
             </div>
         </div>
-        <!-- Repeat this structure for more movies -->
+
+        <div class="movie">
+            <h2>Movie Title 6</h2>
+            <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
+            <div class="download-links">
+                <a href="#" onclick="startTimer('https://example.com/480p')">Download 480p</a>
+                <a href="#" onclick="startTimer('https://example.com/720p')">Download 720p</a>
+                <a href="#" onclick="startTimer('https://example.com/1080p')">Download 1080p</a>
+            </div>
+        </div>
+
+         <div class="movie">
+            <h2>Movie Title 6 </h2>
+            <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
+            <div class="download-links">
+                <a href="#" onclick="startTimer('https://example.com/480p')">480p</a>
+                <a href="#" onclick="startTimer('https://example.com/720p')">720p</a>
+                <a href="#" onclick="startTimer('https://example.com/1080p')">1080p</a>
+            </div>
+        </div>
+
+        <div class="movie">
+            <h2>Movie Title 7 </h2>
+            <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
+            <div class="download-links">
+                <a href="#" onclick="startTimer('https://example.com/480p')">480p</a>
+                <a href="#" onclick="startTimer('https://example.com/720p')">720p</a>
+                <a href="#" onclick="startTimer('https://example.com/1080p')">1080p</a>
+            </div>
+        </div> 
     </div>
 
 </body>
