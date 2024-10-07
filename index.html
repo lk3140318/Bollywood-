@@ -3,175 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Links with Timer</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: #f1f1f1;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            background-color: #ff5722;
-            padding: 2px;
-            text-align: center;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .header h1 {
-            margin: 0;
-            color: #fff;
-        }
-        .header .search-bar input {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            width: 200px;
-        }
-        .telegram-icon img {
-            width: 40px;
-        }
-        .content {
-            padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .movie {
-            background-color: #333;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-        }
-        .movie img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-        .download-links {
-            margin-top: 10px;
-        }
-        .download-links a {
-            text-decoration: none;
-            padding: 10px 15px;
-            background-color: #4caf50;
-            color: #fff;
-            margin-right: 10px;
-            border-radius: 5px;
-        }
-    </style>
-    <script>
-        function startTimer(link) {
-            alert("Please wait 20 seconds...");
-            setTimeout(function() {
-                window.location.href = link;
-            }, 20000);
-        }
-
-        function searchMovies() {
-            let input = document.getElementById('search').value.toLowerCase();
-            let movies = document.getElementsByClassName('movie');
-            for (let movie of movies) {
-                let title = movie.getElementsByTagName('h2')[0].textContent.toLowerCase();
-                movie.style.display = title.includes(input) ? "block" : "none";
-            }
-        }
-    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Beautiful Simple List Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="header">
-        <h1>Movie Downloads</h1>
-        <div class="search-bar">
-            <input type="text" id="search" placeholder="Search for movies..." onkeyup="searchMovies()">
-        </div>
-        <div class="telegram-icon">
-            <a href="https://t.me/yourchannel"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"></a>
-        </div>
-    </div>
+    <header>
+        <h1>Explore Your Items</h1>
+        <input type="text" id="searchBar" placeholder="Search for an item..." onkeyup="searchItems()">
+    </header>
 
-    <div class="content">
-        <div class="movie">
-            <h2>Saripodhaa Sanivaaram 2024</h2>
-            <img src="https://github.com/user-attachments/assets/dc01102f-1266-4445-ace4-e2d4bfa738cb" alt="Movie Poster">
-            <div class="download-links">
-                <a href="#" onclick="startTimer('https://example.com/480p')">480p</a>
-                <a href="#" onclick="startTimer('https://example.com/720p')">720p</a>
-                <a href="#" onclick="startTimer('https://example.com/1080p')">1080p</a>
-            </div>
-        </div>
+    <main>
+        <ul class="item-list" id="itemList">
+            <li><a href="#item1">Item 1</a></li>
+            <li><a href="#item2">Item 2</a></li>
+            <li><a href="#item3">Item 3</a></li>
+            <li><a href="#item4">Item 4</a></li>
+            <li><a href="#item5">Item 5</a></li>
+        </ul>
 
-        <div class="movie">
-            <h2>Movie Title 2</h2>
-            <img src="https://github.com/user-attachments/assets/ee43760b-5091-422e-af32-80a20b76b394" alt="Movie Poster">
-            <div class="download-links">
-                <a href="#" onclick="startTimer('https://example.com/480p')">480p</a>
-                <a href="#" onclick="startTimer('https://example.com/720p')">720p</a>
-                <a href="#" onclick="startTimer('https://example.com/1080p')">1080p</a>
-            </div>
-        </div>
+        <section id="item1" class="item-detail">
+            <h2>Item 1 Details</h2>
+            <p>Description for item 1 goes here.</p>
+        </section>
 
-        <div class="movie">
-            <h2>Movie Title 3</h2>
-            <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
-            <div class="download-links">
-                <a href="#" onclick="startTimer('https://example.com/480p')">Download 480p</a>
-                <a href="#" onclick="startTimer('https://example.com/720p')">Download 720p</a>
-                <a href="#" onclick="startTimer('https://example.com/1080p')">Download 1080p</a>
-            </div>
-        </div>
+        <section id="item2" class="item-detail">
+            <h2>Item 2 Details</h2>
+            <p>Description for item 2 goes here.</p>
+        </section>
 
-        <div class="movie">
-            <h2>Movie Title 4</h2>
-            <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
-            <div class="download-links">
-                <a href="#" onclick="startTimer('https://example.com/480p')">Download 480p</a>
-                <a href="#" onclick="startTimer('https://example.com/720p')">Download 720p</a>
-                <a href="#" onclick="startTimer('https://example.com/1080p')">Download 1080p</a>
-            </div>
-        </div>
+        <section id="item3" class="item-detail">
+            <h2>Item 3 Details</h2>
+            <p>Description for item 3 goes here.</p>
+        </section>
 
-        <div class="movie">
-            <h2>Movie Title 5</h2>
-            <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
-            <div class="download-links">
-                <a href="#" onclick="startTimer('https://example.com/480p')">Download 480p</a>
-                <a href="#" onclick="startTimer('https://example.com/720p')">Download 720p</a>
-                <a href="#" onclick="startTimer('https://example.com/1080p')">Download 1080p</a>
-            </div>
-        </div>
+        <section id="item4" class="item-detail">
+            <h2>Item 4 Details</h2>
+            <p>Description for item 4 goes here.</p>
+        </section>
 
-        <div class="movie">
-            <h2>Movie Title 6</h2>
-            <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
-            <div class="download-links">
-                <a href="#" onclick="startTimer('https://example.com/480p')">Download 480p</a>
-                <a href="#" onclick="startTimer('https://example.com/720p')">Download 720p</a>
-                <a href="#" onclick="startTimer('https://example.com/1080p')">Download 1080p</a>
-            </div>
-        </div>
+        <section id="item5" class="item-detail">
+            <h2>Item 5 Details</h2>
+            <p>Description for item 5 goes here.</p>
+        </section>
+    </main>
 
-         <div class="movie">
-            <h2>Movie Title 6 </h2>
-            <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
-            <div class="download-links">
-                <a href="#" onclick="startTimer('https://example.com/480p')">480p</a>
-                <a href="#" onclick="startTimer('https://example.com/720p')">720p</a>
-                <a href="#" onclick="startTimer('https://example.com/1080p')">1080p</a>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; 2024 Beautiful Simple List Page</p>
+    </footer>
 
-        <div class="movie">
-            <h2>Movie Title 7 </h2>
-            <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
-            <div class="download-links">
-                <a href="#" onclick="startTimer('https://example.com/480p')">480p</a>
-                <a href="#" onclick="startTimer('https://example.com/720p')">720p</a>
-                <a href="#" onclick="startTimer('https://example.com/1080p')">1080p</a>
-            </div>
-        </div> 
-    </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
