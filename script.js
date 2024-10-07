@@ -28,3 +28,5 @@ function searchItems() {
         }
     });
 }
+
+// Show secondary title
